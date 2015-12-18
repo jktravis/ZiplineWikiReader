@@ -1,0 +1,55 @@
+body {
+    background: url(https://images.unsplash.com/42/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=07d9365976f0efd55ad54b105062af3b) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 3px 1px 2px #2f2f2f;
+}
+
+article {
+    background: rgba(186, 168, 101, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 1px 2px #2f2f2f;
+}
+
+#feed img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    float: left;
+    border-radius: 10px;
+}
+
+#feed a,
+#feed a:visited {
+    color: whitesmoke;
+}
+
+.headline {
+    margin: 10px 70px;
+    padding: 10px 5px;
+    font-size: 1.5em;
+}
+
+.row ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.row ul li {
+    display: inline;
+    padding: 10px;
+}
+
+.row ul li:first-child {
+    padding-left: 0;
+}

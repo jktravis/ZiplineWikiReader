@@ -1,0 +1,24 @@
+{
+  "name": "ZiplineWikiReader",
+  "authors": [
+    "jktravis <joshua.travis@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "handlebars": "~4.0.5"
+  }
+}
