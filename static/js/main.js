@@ -21,7 +21,7 @@ $(document).ready(function () {
       },
       dataType: 'jsonp',
       jsonp: 'callback',
-      success: function(resp) {
+      success: function (resp) {
         context.entries = resp.query.search;
         html = template(context);
         $('#feed').html(html);
@@ -42,17 +42,40 @@ $(document).ready(function () {
       },
       dataType: 'jsonp',
       jsonp: 'callback',
-      success: function(resp) {
+      success: function (resp) {
         window.location.href = 'http://en.wikipedia.com/wiki/' + resp.query.random[0].title;
       }
     });
   }
 
   $('#search').autocomplete({
-    source: ['first', 'second', 'third']
+    source: function (req, resp) {
+      $.ajax({
+        url: url,
+        data: {
+          action: 'query',
+          list: 'search',
+          format: 'json',
+          formatversion: 2,
+          srsearch: req.term
+        },
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        success: function (data) {
+          var titles = data.query.search.map(function (curr, index, arr) {
+            return curr.title;
+          });
+          resp(titles);
+        }
+      });
+    },
+    minLength: 3,
+    select: function (event, ui) {
+      runSearch();
+    }
   });
+
   $('#search-button').on('click', runSearch);
   $('#random-button').on('click', randomPage);
-
 
 });
