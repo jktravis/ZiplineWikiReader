@@ -48,7 +48,9 @@ $(document).ready(function () {
     });
   }
 
-  $('#search').on('change keyPress', runSearch);
+  $('#search').autocomplete({
+    source: ['first', 'second', 'third']
+  });
   $('#search-button').on('click', runSearch);
   $('#random-button').on('click', randomPage);
 

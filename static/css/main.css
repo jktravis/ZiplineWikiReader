@@ -38,21 +38,6 @@ article {
     font-size: 1.5em;
 }
 
-.row ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.row ul li {
-    display: inline;
-    padding: 10px;
-}
-
-.row ul li:first-child {
-    padding-left: 0;
-}
-
 .excerpt {
     font-style: italic;
 }
@@ -78,4 +63,22 @@ article {
 
 .form-control:focus {
     border-color: #BAA865;
+}
+
+.ui-autocomplete {
+    background: #BAA865;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-menu-item {
+    padding-left: 10px;
+}
+.ui-state-focus {
+    background: #ffd457;
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
 }
