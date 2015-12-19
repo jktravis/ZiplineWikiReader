@@ -1,5 +1,5 @@
 body {
-    background: url(https://images.unsplash.com/42/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=07d9365976f0efd55ad54b105062af3b) no-repeat center center fixed;
+    background: url(https://images.unsplash.com/photo-1419640303358-44f0d27f48e7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=7647e555b6b57682e4aabb61ae6cfd3c) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -34,7 +34,6 @@ article {
 }
 
 .headline {
-    margin: 10px 70px;
     padding: 10px 5px;
     font-size: 1.5em;
 }

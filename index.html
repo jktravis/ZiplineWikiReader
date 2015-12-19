@@ -24,18 +24,8 @@
     {{#each entries}}
     <article class="row">
         <div class="col-lg-12">
-            {{#if image}}
-                <img src="{{image}}" alt="{{headline}}">
-            {{else}}
-                <img src="{{author.picture}}" alt="{{author.username}}">
-            {{/if}}
-            <p class="headline"><a href="{{link}}" target="_blank">{{headline}}</a></p>
-            <ul>
-                <li>Posted by: <strong><a href="http://www.freecodecamp.com/{{author.username}}" target="_blank">{{author.username}}</a></strong></li>
-                <li>Votes: <strong>{{numVotes}}</strong></li>
-                <li>Posted on: <strong>{{timePosted}}</strong></li>
-                <li><strong><a href="{{storyLink}}" target="_blank">Free Code Camp Link</a></strong></li>
-            </ul>
+            <p class="headline"><a href="http://en.wikipedia.com/wiki/{{title}}" target="_blank">{{title}}</a></p>
+            <p>{{{snippet}}}</p>
         </div>
     </article>
     {{/each}}

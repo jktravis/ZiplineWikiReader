@@ -7,15 +7,24 @@ $(document).ready(function () {
   var context = {};
 
   var html;
+  var url = 'https://en.wikipedia.org/w/api.php';
+  $.ajax({
+    url: url,
+    data: {
+      action: 'query',
+      list: 'search',
+      format: 'json',
+      formatversion: 2,
+      srsearch: 'War of 1812'
+    },
+    dataType: 'jsonp',
+    jsonp: 'callback',
+    success: function(resp) {
+      context.entries = resp.query.search;
+      console.log(context);
+      html = template(context);
+      $('#feed').html(html);
 
-  $.getJSON('http://www.freecodecamp.com/news/hot', function(resp) {
-    context.entries = resp.map(function(curr, index, arr) {
-      curr.timePosted = new Date(curr.timePosted).toISOString().replace(/T(.*)\..*/, ' $1');
-      curr.storyLink = 'http://www.freecodecamp.com/news/' + curr.storyLink.replace(/\s/g, '-');
-      curr.numVotes = curr.upVotes.length;
-      return curr;
-    });
-    html = template(context);
-    $('#feed').html(html);
+    }
   });
 });
