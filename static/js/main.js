@@ -23,14 +23,34 @@ $(document).ready(function () {
       jsonp: 'callback',
       success: function(resp) {
         context.entries = resp.query.search;
-        console.log(context);
         html = template(context);
         $('#feed').html(html);
       }
     });
   }
 
+  function randomPage() {
+    $.ajax({
+      url: url,
+      data: {
+        action: 'query',
+        list: 'random',
+        format: 'json',
+        formatversion: 2,
+        rnnamespace: 0,
+        rnfilterredir: 'nonredirects'
+      },
+      dataType: 'jsonp',
+      jsonp: 'callback',
+      success: function(resp) {
+        window.location.href = 'http://en.wikipedia.com/wiki/' + resp.query.random[0].title;
+      }
+    });
+  }
+
   $('#search').on('change keyPress', runSearch);
-  $('button').on('click', runSearch);
+  $('#search-button').on('click', runSearch);
+  $('#random-button').on('click', randomPage);
+
 
 });
