@@ -8,6 +8,13 @@ $(document).ready(function () {
 
   var html;
   var url = 'https://en.wikipedia.org/w/api.php';
+
+  function runSearch() {
+    console.log($(this).val());
+  }
+
+  $('#search').on('change keyPress', runSearch);
+
   $.ajax({
     url: url,
     data: {
@@ -24,7 +31,6 @@ $(document).ready(function () {
       console.log(context);
       html = template(context);
       $('#feed').html(html);
-
     }
   });
 });

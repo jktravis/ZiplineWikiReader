@@ -61,4 +61,21 @@ article {
     font-size: 1.5em;
 }
 
+.btn-default {
+    color: white;
+    background: #2f2f2f;
+}
 
+.btn-default:hover,
+.btn-default:focus {
+    background: #BAA865;
+}
+
+.form-control {
+    background: #2f2f2f;
+    color: #ccc;
+}
+
+.form-control:focus {
+    border-color: #BAA865;
+}
