@@ -52,3 +52,13 @@ article {
 .row ul li:first-child {
     padding-left: 0;
 }
+
+.excerpt {
+    font-style: italic;
+}
+
+.fa-quote-left {
+    font-size: 1.5em;
+}
+
+
